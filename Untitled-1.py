@@ -1,8 +1,8 @@
-n=100;
-number1=0;number2=0;
-for i in range(1,n+1):
-    number1=number1+(1/i);
-    number2=number2+(1/(i*i));
+c =float( input("please enter number:") );
+EPSILON = 1e-15;
+t = c;
 
-print(number1);
-print(number2);
+while abs(t-c/t) > (EPSILON * t):
+    t= (c/t+t) / 2.0
+    
+print(t);
